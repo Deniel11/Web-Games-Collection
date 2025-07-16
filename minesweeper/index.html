@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="hu">
+    <head>
+        <meta charset="UTF-8">
+        <title>Minesweeper</title>
+        <link rel="icon" type="image/x-icon" href="favicon.ico">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div id="window">
+            <div class="window-titlebar">
+                <span class="window-title">Minesweeper</span>
+                <a id="exit" href="../">X</a>
+            </div>
+
+            <div class="window-settings">
+                <div id="difficulty">
+                    <select id="level">
+                        <option value="easy">Easy</option>
+                        <option value="medium">Medium</option>
+                        <option value="hard">Hard</option>
+                        <option value="expert">Expert</option>
+                        <option value="insane">Insane</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="window-content">
+                <div id="top-bar">
+                    <div id="mine-count">
+                        <img class="timer-digit" src="img/digits/digit0.png" alt="0">
+                        <img class="timer-digit" src="img/digits/digit0.png" alt="0">
+                        <img class="timer-digit" src="img/digits/digit0.png" alt="0">
+                    </div>
+                    <img id="reset-button" src="img/ok.png" alt="0">
+                    <div id="timer">
+                        <img class="timer-digit" src="img/digits/digit0.png" alt="0">
+                        <img class="timer-digit" src="img/digits/digit0.png" alt="0">
+                        <img class="timer-digit" src="img/digits/digit0.png" alt="0">
+                    </div>
+                </div>
+                <div id="game"></div>
+            </div>
+        </div>
+        <script src="scripts.js"></script>
+    </body>
+</html>

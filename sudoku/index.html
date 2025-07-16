@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="confetti.css">
+    <link rel="stylesheet" href="modal.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <title>Sudoku Game</title>
+</head>
+<body>
+    <div id="start-screen">
+        <a id="exit" href="../">X</a>
+        <h2>🧩 Sudoku Game</h2>
+        <p>Sudoku size:</p>
+        <div class="grid-size-buttons">
+            <button class="grid-btn">4</button>
+            <button class="grid-btn active">9</button>
+            <button class="grid-btn">16</button>
+        </div>
+        <p>Choose difficulty:</p>
+        <label for="start-difficulty">Difficulty:</label>
+        <select id="start-difficulty"></select>
+        <div id="controls">
+            <button id="start-btn">Start new game</button>
+            <button id="continue-btn" style="display: none;">Continue</button>
+        </div>
+    </div>
+
+    <div id="game-screen" style="display: none;"></div>
+
+    <div id="confetti-container"></div>
+
+    <div id="win-modal" class="modal">
+        <div class="modal-content">
+            <h2>🎉 Congratulations! 🎉</h2>
+            <p>You successfully completed it!<br>Would you like to play again?</p>
+            
+            <label for="modal-difficulty">Difficulty:</label>
+            <select id="modal-difficulty"></select>
+            <div id="controls">
+                <button id="restart-btn">Start new game</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

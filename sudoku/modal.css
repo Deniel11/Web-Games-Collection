@@ -1,0 +1,52 @@
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 2rem;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+#restart-btn {
+    padding: 0.6rem 1.2rem;
+    font-size: 16px;
+    background-color: #007BFF;
+    border: none;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#restart-btn:hover {
+    background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+
+    .modal-content {
+        width: 95%;
+        max-width: 320px;
+        padding: 1.5rem 1rem;
+        font-size: 0.95rem;
+    }
+
+    #restart-btn {
+        width: 100%;
+        font-size: 1.1rem;
+    }
+}
