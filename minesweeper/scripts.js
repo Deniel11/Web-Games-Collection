@@ -1,6 +1,7 @@
 let rows = 8;
 let cols = 8;
 let bombsCount = 10;
+let startBombsCount = 10;
 const game = document.getElementById('game');
 const levelSelect = document.getElementById('level');
 
@@ -47,6 +48,7 @@ function init() {
     const level = levelSelect.value;
     localStorage.setItem('difficulty', level);
     ({ rows, cols, bombsCount } = difficulties[level]);
+    startBombsCount = bombsCount;
     updateDigitDisplay(mineCount, bombsCount);
 
     updateResetButton("img/ok.png");
@@ -56,7 +58,6 @@ function init() {
     game.style.gridTemplateColumns = `repeat(${cols}, 20px)`;
     gameOver = false;
 
-    // Létrehozzuk a mezőket
     for (let r = 0; r < rows; r++) {
         board[r] = [];
         for (let c = 0; c < cols; c++) {
@@ -108,7 +109,6 @@ function generateBombsAndNumbers(safeRow, safeCol) {
     saveGameState();
 }
 
-// Mezők felfedése
 async function reveal(row, col) {
     const cell = board[row][col];
 
@@ -182,11 +182,12 @@ function checkWin() {
             if (board[r][c].revealed) revealedCount++;
         }
     }
-
-    if (revealedCount === rows * cols - bombsCount) {
+    
+    if (revealedCount === rows * cols - startBombsCount) {
         gameOver = true;
         stopTimer();
         revealAll();
+        updateResetButton("img/win.png");
     } else {
         saveGameState();
     }
