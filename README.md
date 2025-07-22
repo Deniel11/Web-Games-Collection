@@ -73,7 +73,7 @@ Or simply host the folder using a static server (like [Live Server](https://mark
 - Multilingual support
 
 ## 📜 License
-This project is open-source and free to use under the [MIT License](https://opensource.org/license/mit/).
+This project is open-source and free to use under the [MIT License](LICENSE).
 
 ## Contact
 
